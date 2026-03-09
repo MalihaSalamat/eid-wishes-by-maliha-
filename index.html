@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eid Mubarak 🌙 — From Maliha</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════
+       CONFETTI CANVAS  (always on top)
+  ═══════════════════════════════════════ -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════════
+       TWINKLING STARFIELD  (behind scenes)
+  ═══════════════════════════════════════ -->
+  <div id="starfield"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       SCENE 1 — CURTAIN OPENING
+  ═══════════════════════════════════════ -->
+  <div class="scene" id="scene1">
+
+    <!-- Top ornamental bar with gold fringe -->
+    <div class="valance">
+      <div class="fringe-row" id="fringe-row"></div>
+    </div>
+
+    <!-- Left curtain -->
+    <div class="curtain curtain-left" id="cLeft">
+      <div class="curtain-body"></div>
+    </div>
+
+    <!-- Right curtain -->
+    <div class="curtain curtain-right" id="cRight">
+      <div class="curtain-body"></div>
+    </div>
+
+    <!-- SVG Crescent Moon (rises behind the text) -->
+    <div class="moon-shell" id="moonShell">
+      <svg class="moon-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="moonGrad" cx="36%" cy="36%" r="64%">
+            <stop offset="0%" stop-color="#fff9e4" />
+            <stop offset="40%" stop-color="#f5d060" />
+            <stop offset="100%" stop-color="#b87d0a" />
+          </radialGradient>
+          <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Full gold disc -->
+        <circle cx="100" cy="100" r="80" fill="url(#moonGrad)" filter="url(#bloom)" />
+        <!-- Overlap disc creates crescent shape -->
+        <circle cx="140" cy="88" r="70" fill="#0d1840" />
+        <!-- Accent star -->
+        <g transform="translate(162, 53)" fill="#f8e070" opacity="0.96" filter="url(#bloom)">
+          <polygon points="0,-10 2.3,-3.1 9.5,-3.1 3.8,1.1 5.4,8.4 0,4.2 -5.4,8.4 -3.8,1.1 -9.5,-3.1 -2.3,-3.1" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Greeting text (revealed after curtains open) -->
+    <div class="greeting-reveal" id="greetingReveal">
+      <p class="urdu-text">عید مبارک</p>
+      <h1 class="eid-heading">✨ Eid Mubarak ✨</h1>
+      <div class="gold-rule">
+        <span class="rule-line"></span>
+        <span class="rule-gem">◆</span>
+        <span class="rule-line"></span>
+        <span class="rule-gem">◆</span>
+        <span class="rule-line"></span>
+      </div>
+      <p class="from-label">From &nbsp;<span class="name-highlight">Maliha</span></p>
+    </div>
+
+  </div><!-- /scene1 -->
+
+
+  <!-- ═══════════════════════════════════════
+       SCENE 2 — MAIN GREETING PAGE
+  ═══════════════════════════════════════ -->
+  <div class="scene" id="scene2">
+    <div class="s2-content">
+
+      <!-- Floating moon -->
+      <div class="s2-moon-emoji">🌙</div>
+      <br>
+                                
+      <!-- Page title -->
+      <h1 class="s2-title">Eid Mubarak</h1>
+<br>
+      <!-- Urdu blessing line -->
+      <p style="font-size: 45px;" class="s2-urdu" >
+        
+
+
+        عید مبارک —
+        <br> <br>
+        <br> آم کے  رس کو  جوس  کہتے  ہیں     🧃 <br>
+      
+
+<br>
+            
+        جو عیدی نہ دے اسے کنجوس کہتے ہیں😁🤧
+
+
+
+      </p>
+      <!-- Decorative swinging lanterns -->
+      <div class="lantern-row">
+        <span class="lantern">🏮</span>
+        <span class="lantern">🌙</span>
+        <span class="lantern">🏮</span>
+      </div>
+
+      <!-- Blessing card -->
+      <div style="font-size: 30px;" class="card">
+        <p  style="font-size: 30px;" class="card-subtitle">A Blessed Eid to You &amp; Yours</p>
+        <p   style="font-size: 30px;" class="card-body">
+          May Allah accept all your  <span class="hl">GOOD DEEDS </span> of  Ramadan<br />
+          May your all duas got accepted this year <br />
+          and bring <span class="hl">peace, love</span> &amp; endless happiness.<br />
+          Wishing you and your family a beautiful<br />
+          <span class="hl">Eid Mubarak!</span> 🌸
+          <p>Don't forget to give me Eidi as <b>i developed </b>this for uhh   👉🏻👈🏻<br> by working straught 4 hours 🦾 <br> (If you are not from my family and frnds then plz ignore that eidi msg 🙂)   </p>
+        </p> 
+        <p class="card-dua">"Taqabbal Allaahu minnaa wa minkum" 🤲</p>
+      </div>
+
+      <!-- Sender -->
+      <p  style="font-size: 25px;" class="s2-sender">— much love &amp; duas, from <em>Maliha Salamat</em> ✨</p>
+
+
+           <br>
+<br>
+<br>
+<br> 
+
+      <p>---------------------------------------</p>
+    </div>
+  </div><!-- /scene2 -->
+
+
+  <!-- Music toggle button -->
+  <button id="music-btn" title="Toggle music" aria-label="Toggle Eid music">🔊</button>
+<br>
+<br>
+<br>
+<br>
+<br> 
+            
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
